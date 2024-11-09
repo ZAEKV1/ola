@@ -1,0 +1,42 @@
+
+CREATE TABLE plan_salud (
+    clavep_plan_salud INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    dieta VARCHAR(100),
+    recomendaciones VARCHAR(255)
+);
+
+CREATE TABLE test (
+    clave_p_test INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    fecha_creacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    puntaje INT NOT NULL,
+    clavep_plan_salud INT,
+    CONSTRAINT fk_clavep_plan_salud1 FOREIGN KEY (clavep_plan_salud) 
+        REFERENCES plan_salud(clavep_plan_salud)
+);
+CREATE TABLE persona (
+    clave_p_persona INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(100) NOT NULL,
+    apellido_paterno VARCHAR(100) NOT NULL,
+    apellido_materno VARCHAR(100) NOT NULL,
+    edad INT NOT NULL,
+    sexo VARCHAR(10) NOT NULL,
+    clavep_test INT,
+    CONSTRAINT fk_clavep_test1 FOREIGN KEY (clavep_test) 
+        REFERENCES test(clave_p_test)
+);
+
+CREATE TABLE iemece (
+    clavep_p_imc INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    fecha_clc DATETIME DEFAULT CURRENT_TIMESTAMP,
+    altura DECIMAL(5,2) NOT NULL,  
+    peso DECIMAL(5,2) NOT NULL,     
+    imc DECIMAL(5,2) NOT NULL,      
+    clavep_p_persona INT,           
+    CONSTRAINT FK_clavep_p_persona1 FOREIGN KEY (clavep_p_persona) 
+        REFERENCES persona(clave_p_persona)
+        ON DELETE CASCADE
+);
+
+
+
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Persona</title>
+    <style>
+        body {
+            background-image: url('imagenes/aaaa.png'); 
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffcc00;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #6b8e23;
+            border-radius: 5px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus, input[type="number"]:focus {
+            border-color: #4682b4;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6347;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #cd5c5c;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulario Persona</h2>
+    <form action="persononon.php" method="post" onsubmit="return validarFormulario()">
+        <input type="text" id="nombre" name="txt_nombre" placeholder="Nombre" required><br>
+        <input type="text" id="ape_pa" name="txt_ape_Pa" placeholder="Apellido paterno" required><br>
+        <input type="text" id="ape_ma" name="txt_ape_Ma" placeholder="Apellido materno" required><br>
+        <input type="number" id="edad" name="txt_edad" placeholder="Edad" required><br>
+        <input type="text" id="sexo" name="txt_sexo" placeholder="Sexo" required><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <script>
+        function validarFormulario() {
+            const nombre = document.getElementById('nombre').value;
+            const apellido_pa = document.getElementById('ape_pa').value;
+            const apellido_ma = document.getElementById('ape_ma').value;
+            const edad = document.getElementById('edad').value;
+            const sexo = document.getElementById('sexo').value;
+            if (nombre === "" || apellido_pa === "" || apellido_ma === "" || edad === "" || sexo === "") {
+                alert("Por favor, completa todos los campos.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

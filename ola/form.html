@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PLAN SALUD</title>
+        <script>
+             function validarCaracteres(input) {
+            const regex = /^[a-zA-Z\s]*$/; 
+            if (!regex.test(input.value)) {
+                alert("Por favor, introduce solo caracteres");; 
+            }
+        }
+        function validarFormulario() {
+            const dieta = document.getElementById('txt_dieta').value;
+            const recomendaciones = document.getElementById('txt_recomendaciones').value;
+
+            if (dieta === "" || recomendaciones === "") {
+                alert("Por favor, completa todos los campos.");
+                return false;
+            }
+            return true;
+        }
+        </script>
+    </head>
+    <body>
+        <h2>Formulario saludable</h2>
+        <form action="guardar_datos.php" method="post">
+            <input type="text" id="Dieta" name="txt_dieta"  placeholder="Dieta" onkeyup="validarCaracteres(this)" required><br>
+            <input type="text" id="Recomendaciones" name="txt_recomendaciones"  placeholder="Recomendaciones" onkeyup="validarCaracteres(this)" required><br>
+            <button type="submit" >enviar</button>
+        </form>
+    </body>
+</html>

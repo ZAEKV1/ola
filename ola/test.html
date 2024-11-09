@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST yipiiiiiiiiiii</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d9eec8;
+            margin: 0;
+            padding: 20px;
+        }
+        img {
+            float: right;
+            height: 300px;
+            width: 400px;
+            border-radius: 10px;
+            margin: 40px 15px;
+        }
+        #menu {
+            background-color: rgb(161, 236, 90);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .section {
+            background-color: #b2f090; 
+            color: rgb(2, 2, 2);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            height: 500px;
+            width: 1100px;
+        }
+        .section-blue {
+            background-color: #a8e4f8; 
+            color: black; 
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            height: 500px;
+            width: 1100px;
+        }
+        .section-yellow {
+            background-color: #f3e29c; 
+            color: black;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            height: 500px;
+            width: 1100px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+        h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        input[type="submit"] {
+            background-color: #f7ada0;
+            color: rgb(8, 8, 8);
+            border: none;
+            border-radius: 5px;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 1em;
+            display: block;
+            margin: 0 auto; 
+        }
+        input[type="submit"]:hover {
+            background-color: #fc6c73;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            input[type="submit"] {
+                width: 100%;
+                padding: 15px; 
+            }
+            .section, .section-blue, .section-yellow {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="encabezado">
+        <h1>Cuestionario de Hábitos Saludables</h1>
+    </header>
+    
+    <form name="cuestionario" action="eltesote.php" method="post">
+        <nav id="menu"></nav>
+        
+        <div class="section">
+            <h2>La Alimentacion </h2>
+            <img class="alimentos" src="kkkkk.jpg"><br><br>
+            <label>1.- ¿Cuántas comidas haces al día?</label>
+            <input type="radio" name="rd_resp1" value="4">A) Suelo hacer 3 comidas principales y dos tentempies entre horas<br>
+            <input type="radio" name="rd_resp1" value="3">B) Suelo hacer 3 comidas principales y un tentempié a media mañana o media noche<br>
+            <input type="radio" name="rd_resp1" value="1">C) Suelo hacer 3 comidas principales<br><br>
+
+            <label>2.- ¿Desayunas antes de ir al colegio o al instituto?</label>
+            <input type="radio" name="rd_resp2" value="1">A) No desayuno casi nunca<br>
+            <input type="radio" name="rd_resp2" value="2">B) Desayuno poco<br>
+            <input type="radio" name="rd_resp2" value="4">C) Hago un buen desayuno<br><br>
+            
+            <label>3.- ¿Cuántas raciones de fruta y verdura tomas al día?</label>
+            <input type="radio" name="rd_resp3" value="1">A) Entre 0 y 1 raciones<br>
+            <input type="radio" name="rd_resp3" value="2">B) Entre 2 y 4 raciones<br>
+            <input type="radio" name="rd_resp3" value="4">C) 5 o más raciones<br><br>
+
+            <label>4.- ¿Cuántas veces a la semana comes bollería industrial, comida rápida-chucherías?</label>
+            <input type="radio" name="rd_resp4" value="4">A) Nunca o casi nunca<br>
+            <input type="radio" name="rd_resp4" value="2">B) 1-2 veces a la semana<br>
+            <input type="radio" name="rd_resp4" value="1">C) Más de 2 veces a la semana<br><br>
+            
+        </div>
+
+        <div class="section-blue">
+            <h2>El Ejercicio</h2>
+            <img class="ejercicios" src="wawawa.png">
+            <label>5.- ¿Cuánto caminas o corres al día?</label>
+            <input type="radio" name="rd_resp5" value="1">A) Menos de 1 hora<br>
+            <input type="radio" name="rd_resp5" value="3">B) Entre 1 hora y 3 horas<br>
+            <input type="radio" name="rd_resp5" value="4">C) Más de 3 horas<br><br>
+
+            <label>6.- ¿Cuántas horas dedicas a hacer deporte a la semana?</label>
+            <input type="radio" name="rd_resp6" value="1">A) Menos de 1 hora<br>
+            <input type="radio" name="rd_resp6" value="3">B) Entre 1 hora y 3 horas<br>
+            <input type="radio" name="rd_resp6" value="4">C) Más de 3 horas<br><br>
+
+            <label>7.- ¿Cuántas horas dedicas a realizar alguna actividad física que te distrae o relaja a la semana?</label>
+            <input type="radio" name="rd_resp7" value="1">A) Menos de 1 hora<br>
+            <input type="radio" name="rd_resp7" value="3">B) Entre 1 hora y 3 horas<br>
+            <input type="radio" name="rd_resp7" value="4">C) Más de 3 horas<br><br>
+        </div>
+
+        <div class="section-yellow">
+            <h2>La higiene Personal</h2>
+            <img class="higienes" src="machin.png">
+            <label>8.- ¿Cuántas veces te duchas a la semana?</label>
+            <input type="radio" name="rd_resp8" value="1">A) Menos de 3 veces<br>
+            <input type="radio" name="rd_resp8" value="2">B) Entre 4 y 5 veces<br>
+            <input type="radio" name="rd_resp8" value="5">C) Todos los días<br><br>
+
+            <label>9.- ¿Cuántas horas duermes al día?</label>
+            <input type="radio" name="rd_resp9" value="1">A) Entre 4 y 5 horas<br>
+            <input type="radio" name="rd_resp9" value="3">B) Entre 6 y 7 horas<br>
+            <input type="radio" name="rd_resp9" value="4">C) Entre 8 y 9 horas<br><br>
+
+            <label>10.- ¿Te haces al menos un chequeo médico (de control) por año?</label>
+            <input type="radio" name="rd_resp10" value="4">A) Sí. Al menos una vez al año<br>
+            <input type="radio" name="rd_resp10" value="2">B) Me hago chequeos, pero
